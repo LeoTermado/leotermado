@@ -5,7 +5,7 @@
 Hi — I’m Leo. I just finished my Abitur and will start my dual B.Sc. in Business Informatics at **CBS International Business School (Cologne)** with **KDVZ (Frechen)** on **September 1, 2025**.  
 I’m largely self-taught and took 3 long-time courses in computer science at school. I have practical experience with **Java** and building software solutions (incl. databases/SQL), and lately I’m focusing on **Swift + Xcode**. Long-term I’m aiming for an **M.Sc. in Software Engineering abroad**.
 
-- 🌐 Website (EN/DE): **https://leotermado.github.io**
+- 🌐 Website (EN/DE): **https://leotermado.github.io/leotermado**
 - 💼 LinkedIn: **https://www.linkedin.com/in/leo-termado-20613735a/**
 - ✉️ Email: **leotermado@outlook.com**
 
