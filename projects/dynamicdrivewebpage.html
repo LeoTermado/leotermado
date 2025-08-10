@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dynamic Drive — Leo Termado</title>
   <meta name="description" content="Dynamic Drive by Leo Termado — live car telemetry controls music via AudioKit on iOS." />
-
-  <!-- Local fonts (same as main site) -->
   <style>
     @font-face{
       font-family: "Ortica Linear";
@@ -53,7 +51,6 @@
     }
     .container{width:var(--content-w); margin-inline:auto;}
 
-    /* Header: Back link */
     .project-header{
       background: var(--nav-bg);
       color: var(--nav-text);
@@ -68,7 +65,6 @@
     .back:hover{ opacity:.9 }
     .arrow{font-size:18px; line-height:1;}
 
-    /* Main layout */
     main{ padding: 56px 0 64px; }
     h1{ font-size: clamp(28px, 6vw, 40px); line-height:1.15; margin:0 0 10px; font-weight:700; }
     .lead{ font-size: clamp(16px, 2.2vw, 18px); margin: 8px 0 16px; color:var(--muted); }
@@ -103,7 +99,6 @@
     ul{ margin: 0; padding-left: 18px; }
     li{ margin: 6px 0; }
 
-    /* Footer */
     footer{
       background: var(--nav-bg);
       color: var(--nav-text);
@@ -112,7 +107,6 @@
       font-size:13px;
     }
 
-    /* Links */
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
   </style>
@@ -129,14 +123,11 @@
   </header>
 
   <main class="container">
-
-    <!-- HERO -->
     <section class="section" aria-labelledby="title">
       <h1 id="title">Dynamic Drive</h1>
       <p class="lead">
         Inspired by Mercedes’ Sound Drive: live car data controls how music plays. Built with Xcode and Swift — work in progress.
       </p>
-
       <div class="meta-row">
         <span class="pill">Status: In progress</span>
         <span class="pill">Stack: Swift · Xcode · AudioKit</span>
@@ -145,7 +136,6 @@
       </div>
     </section>
 
-    <!-- OVERVIEW / WHY -->
     <section class="section">
       <h2>Overview</h2>
       <div class="card">
@@ -157,7 +147,6 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
     <section class="section">
       <h2>How it works</h2>
       <div class="card">
@@ -169,7 +158,6 @@
       </div>
     </section>
 
-    <!-- CURRENT FOCUS -->
     <section class="section">
       <h2>Current focus</h2>
       <div class="card">
@@ -181,7 +169,6 @@
       </div>
     </section>
 
-    <!-- KEY BEHAVIORS / EXAMPLE -->
     <section class="section">
       <h2>Key behavior example</h2>
       <div class="card">
@@ -193,7 +180,6 @@
       </div>
     </section>
 
-    <!-- LEARNINGS -->
     <section class="section">
       <h2>What I’m learning</h2>
       <div class="card">
@@ -205,7 +191,6 @@
       </div>
     </section>
 
-    <!-- ROADMAP -->
     <section class="section">
       <h2>Roadmap</h2>
       <div class="card">
@@ -219,7 +204,6 @@
         </ul>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -227,7 +211,6 @@
   </footer>
 
   <script>
-    // set year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
