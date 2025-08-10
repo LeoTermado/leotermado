@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynamic Drive — Leo Termado</title>
+  <meta name="description" content="Dynamic Drive by Leo Termado — live car telemetry controls music via AudioKit on iOS." />
+
+  <!-- Local fonts (same as main site) -->
+  <style>
+    @font-face{
+      font-family: "Ortica Linear";
+      src: url("../assets/fonts/OrticaLinear-Light.woff2") format("woff2");
+      font-weight: 300; font-style: normal; font-display: swap;
+    }
+    @font-face{
+      font-family: "Ortica Linear";
+      src: url("../assets/fonts/OrticaLinear-Regular.woff2") format("woff2");
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face{
+      font-family: "Ortica Linear";
+      src: url("../assets/fonts/OrticaLinear-Bold.woff2") format("woff2");
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+
+    :root{
+      --bg:#ffffff;
+      --surface:#f2f1ee;
+      --text:#45523e;
+      --muted:#6f7767;
+      --border:#d9d6cf;
+      --accent:#0d402d;
+      --nav-bg:#45523e;
+      --nav-text:#ffffff;
+      --shadow:0 10px 30px rgba(0,0,0,.12);
+      --radius:14px;
+      --nav-h:60px;
+      --content-w: min(960px, 92vw);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Ortica Linear", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight:300;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    .container{width:var(--content-w); margin-inline:auto;}
+
+    /* Header: Back link */
+    .project-header{
+      background: var(--nav-bg);
+      color: var(--nav-text);
+      height: var(--nav-h);
+      display:flex; align-items:center;
+    }
+    .back{
+      display:inline-flex; align-items:center; gap:10px;
+      color:var(--nav-text); text-decoration:none; font-weight:400;
+      padding: 10px 0;
+    }
+    .back:hover{ opacity:.9 }
+    .arrow{font-size:18px; line-height:1;}
+
+    /* Main layout */
+    main{ padding: 56px 0 64px; }
+    h1{ font-size: clamp(28px, 6vw, 40px); line-height:1.15; margin:0 0 10px; font-weight:700; }
+    .lead{ font-size: clamp(16px, 2.2vw, 18px); margin: 8px 0 16px; color:var(--muted); }
+    .muted{ color: var(--muted); }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid var(--border);
+      background: var(--surface);
+      color:var(--text);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:400;
+    }
+    .meta-row{
+      display:flex; flex-wrap:wrap; gap:10px 12px;
+      margin-top:10px;
+    }
+
+    .section{ margin-top:28px; }
+    .card{
+      margin-top:12px;
+      background: var(--surface);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px;
+    }
+
+    h2{ font-size: clamp(20px, 3vw, 26px); margin: 0 0 10px; font-weight:700; }
+    ul{ margin: 0; padding-left: 18px; }
+    li{ margin: 6px 0; }
+
+    /* Footer */
+    footer{
+      background: var(--nav-bg);
+      color: var(--nav-text);
+      text-align:center;
+      padding:14px 0;
+      font-size:13px;
+    }
+
+    /* Links */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header class="project-header">
+    <div class="container">
+      <a class="back" href="../index.html#projects" aria-label="Back to main page">
+        <span class="arrow">←</span>
+        <span>Back to main page</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="section" aria-labelledby="title">
+      <h1 id="title">Dynamic Drive</h1>
+      <p class="lead">
+        Inspired by Mercedes’ Sound Drive: live car data controls how music plays. Built with Xcode and Swift — work in progress.
+      </p>
+
+      <div class="meta-row">
+        <span class="pill">Status: In progress</span>
+        <span class="pill">Stack: Swift · Xcode · AudioKit</span>
+        <span class="pill">Hardware: OBD-II Bluetooth scanner</span>
+        <span class="pill">Platform: iOS</span>
+      </div>
+    </section>
+
+    <!-- OVERVIEW / WHY -->
+    <section class="section">
+      <h2>Overview</h2>
+      <div class="card">
+        <p>
+          I saw Mercedes’ Sound Drive and was fascinated by the idea of steering music with live car data. My approach uses an
+          OBD-II scanner that streams data over Bluetooth to the phone. The app’s audio engine then maps those signals to
+          musical parameters, so driving literally shapes the sound.
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <h2>How it works</h2>
+      <div class="card">
+        <ul>
+          <li><strong>data:</strong> OBD-II scanner sends live car data over Bluetooth to the iPhone.</li>
+          <li><strong>Mapping:</strong> Values like speed feed envelopes/curves that control stem volumes and filters.</li>
+          <li><strong>Engine:</strong> AudioKit processes stems; the app applies filter cuts and fades in/out stems based on the mapping.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CURRENT FOCUS -->
+    <section class="section">
+      <h2>Current focus</h2>
+      <div class="card">
+        <p>
+          I’m deep in the <strong>AudioKit integration</strong> — a completely new world for me. There’s almost no material online for this exact context,
+          so I’m figuring it out myself. Music theory isn’t the problem; it’s wiring up a reliable audio graph and getting the behavior right.
+          UI is not a priority now: first solid <strong>audio logic</strong>, then <strong>Bluetooth connection</strong>; UI comes last.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY BEHAVIORS / EXAMPLE -->
+    <section class="section">
+      <h2>Key behavior example</h2>
+      <div class="card">
+        <ul>
+          <li>At standstill, music plays but only the <strong>bass</strong> is audible — with a <strong>high/low cut</strong> applied.</li>
+          <li>As speed increases, more <strong>stems</strong> fade in and their <strong>filters open</strong> progressively.</li>
+          <li>Smooth transitions (no clicks) via envelopes and live data updates.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LEARNINGS -->
+    <section class="section">
+      <h2>What I’m learning</h2>
+      <div class="card">
+        <ul>
+          <li>Designing an AudioKit graph (mixers, filters, nodes) for real-time control.</li>
+          <li>Mapping continuous sensor data to musical parameters (curves, thresholds, smoothing).</li>
+          <li>Swift and Xcode.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section">
+      <h2>Roadmap</h2>
+      <div class="card">
+        <ul>
+          <li>Finish the heart of the project: Audio Logic.</li>
+          <li>Implement Bluetooth classes for OBD-II scanner connection.</li>
+          <li>Finetune Audio Logic for even smoother transitions</li>
+          <li>Build minimal UI after engine &amp; Bluetooth are stable.</li>
+          <li>In-car testing and iteration.</li>
+          <li>integrate some sort of AI in the future</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Leo Termado
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
