@@ -13,7 +13,7 @@ I’m largely self-taught and took 3 long-time courses in computer science at sc
 
 ## What I’m working on
 
-### Dynamic Drive (iOS, WIP)
+### HighwayHarmonics (iOS, WIP)
 **Idea:** live car telemetry shapes the music you hear.  
 I was inspired by Mercedes’ “Sound Drive”: I use an **OBD-II Bluetooth scanner** to stream real-time data to the phone; the app maps those signals to audio parameters via **AudioKit**.
 
