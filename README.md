@@ -51,14 +51,6 @@ Design language: light background, green/white accents, subtle hover effects.
 
 ## Contact
 
-- LinkedIn: **/leo-termado-20613735a/**
+- LinkedIn: **[/leo-termado-20613735a/](https://www.linkedin.com/in/leo-termado-20613735a/)**
 - Email: **leotermado@outlook.com**
 - GitHub: **@LeoTermado**
-
----
-
-### Notes
-
-- To show this README on your **profile page**, create a public repo named **exactly** `LeoTermado` and put this file as `README.md` in the repo root.  
-- The website itself is published from `LeoTermado.github.io`.
-
