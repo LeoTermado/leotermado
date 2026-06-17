@@ -31,6 +31,7 @@ Private Toolbox is a browser-based Flask app with tools for PDFs, images, text, 
 * **Stack:** Python · Flask · PyPDF2 · Pillow · Werkzeug
 * **Focus:** practical local tools, clean structure, reusable helpers, and privacy-friendly file processing.
 * **Direction:** free and open-source friendly, licensed under GPLv3.
+* Repository: [Private Toolbox](https://github.com/LeoTermado/private-toolbox)
 
 ### KI Project (archive / not finished)
 
