@@ -21,7 +21,7 @@ I was inspired by Mercedes’ “Sound Drive”: I use an **OBD-II Bluetooth sca
 * **Stack:** Swift · Xcode · AudioKit · OBD-II (Bluetooth)
 * **Behavior (example):** at standstill only the **bass** with high/low cut is audible. As speed increases, more **stems** fade in and filters open smoothly.
 * **Focus right now:** solid **audio engine** first, then **Bluetooth** connection, then **UI**.
-* Project page: [`/projects/current.html`](https://leotermado.github.io/projects/current.html)
+* Project page: [`/projects/current.html`](highwayharmonics.de)
 
 ### Private Toolbox (Flask, WIP)
 
